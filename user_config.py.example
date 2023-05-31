@@ -1,0 +1,37 @@
+# Affects the web UI
+title = "Chimera Linux"
+title_url = "https://chimera-linux.org"
+bot_url = "https://build.chimera-linux.org/"
+
+# We always want this
+master_protocol = "pb"
+# Use an integer for non-TLS
+master_port = "ssl:9989:privateKey=server.key:certKey=server.pem"
+master_db = "sqlite:///state.sqlite"
+
+# The listening port of the webui
+www_port = 8010
+
+cports_repo = "https://github.com/chimera-linux/cports.git"
+cports_branch = "master"
+
+# Where to synchronize the repos to
+repo_dest = "where@therepo.is"
+# Can be overridden in case e.g. port
+# is different, e.g. ssh -p 1234
+repo_ssh = "ssh"
+
+# Machine definition
+machines = [
+    {
+        # The arch name
+        "arch": "x86_64",
+        # Where cbuild config file resides on worker
+        "config": "/home/builder/cbuild/config.ini",
+        # Where full repository resides on worker
+        # Trailing slash is required
+        "repo-src": "/home/builder/cbuild/packages/",
+        # Where full repository resides on mirror
+        "repo-dest": f"/media/repo/repo-x86_64",
+    },
+]

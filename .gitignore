@@ -1,0 +1,9 @@
+*.log
+*.csr
+*.key
+*.pem
+*.sqlite
+twistd.*
+__pycache__
+master-secrets
+user_config.py
