@@ -32,6 +32,9 @@ machines = [
         # Trailing slash is required
         "repo-src": "/home/builder/cbuild/packages/",
         # Where full repository resides on mirror
-        "repo-dest": f"/media/repo/repo-x86_64",
+        # It is recommended to set this to / and then
+        # put like command="rrsync ... /path/to/repo"
+        # in the authorized_keys instead
+        "repo-dest": "/",
     },
 ]
