@@ -9,6 +9,9 @@ master_protocol = "pb"
 master_port = "ssl:9989:privateKey=server.key:certKey=server.pem"
 master_db = "sqlite:///state.sqlite"
 
+# github client id for authentication
+github_client_id = "blablabla"
+
 # The listening port of the webui
 www_port = 8010
 
