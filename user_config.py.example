@@ -23,6 +23,13 @@ repo_dest = "where@therepo.is"
 # Can be overridden in case e.g. port
 # is different, e.g. ssh -p 1234
 repo_ssh = "ssh"
+# Custom command to be run on repo_dest at the end
+# Can be empty in which case it is not used at all
+repo_post = ["update-db"]
+# The buildbot name/descs for repo_post
+repo_hook = "update_db"
+repo_hookdesc = "Update package database"
+repo_hookdone = "Updated package database"
 
 # Machine definition
 machines = [
